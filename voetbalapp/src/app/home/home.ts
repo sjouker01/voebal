@@ -8,13 +8,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.scss'
 })
 export class Home {
-  years: any[] = [];
-
+  gameDates: any[] = [];
+  
   constructor(private homeService: HomeApi) {
     this.homeService.getData().subscribe((data:any) =>{
-    this.years = data.Search;
+      this.gameDates = data.Search;
     }
-    )
-  }
-
+  )
+  console.log(this.gameDates);
+}
 }
