@@ -12,9 +12,10 @@ export class Home {
   
   constructor(private homeService: HomeApi) {
     this.homeService.getData().subscribe((data:any) =>{
-      this.gameDates = data.Search;
+      this.gameDates = data;
+     
+     
     }
-  )
-  console.log(this.gameDates);
+  ) 
 }
 }
