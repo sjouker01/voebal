@@ -6,5 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeApi {
 
-  constructor() { }
+  constructor(private http:HttpClient) { 
+
+  }
+  getData(){
+    return this.http.get('https://webteacher.nl/voetbal/json.php?data=worldcups')
+  }
 }
