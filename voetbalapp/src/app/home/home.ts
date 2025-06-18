@@ -8,8 +8,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.scss'
 })
 export class Home {
-  gameDates: any[] = [];
   
+  /**
+   * Description placeholder
+   *array of jaar
+   * @type {any[] }
+   */
+  gameDates: any[] = []; 
   constructor(private homeService: HomeApi) {
     this.homeService.getData().subscribe((data:any) =>{
       this.gameDates = data;
