@@ -4,6 +4,7 @@ import { Home } from './home/home';
 import { ToernooiDetails } from './toernooi-details/toernooi-details';
 
 
+
 export const routes: Routes = [
 
     {
@@ -11,7 +12,7 @@ export const routes: Routes = [
         component: Home
     },
     {
-        path: 'toernooi-details/id',
+        path: 'toernooi-details:/id',
         component: ToernooiDetails,
         
     }

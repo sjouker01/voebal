@@ -1,7 +1,7 @@
 <section class="hompage">
    <ul *ngFor=" let gameDate of gameDates">
       <p>{{gameDate.id}}</p>
-      <a [routerLink]="['/toernooi-details', gameDate.id]">{{gameDate.country}}</a>
+      <a routerLink="toernooi-details" routerLinkActive="active">{{gameDate.country}}</a>
 
    </ul>
 </section>
