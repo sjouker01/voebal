@@ -12,4 +12,7 @@ export class HomeApi {
   getData(){
     return this.http.get('https://webteacher.nl/voetbal/json.php?data=worldcups')
   }
+  getDataId(){
+    return this.http.get('https://webteacher.nl/voetbal/json.php?data=worldcups')
+  }
 }
