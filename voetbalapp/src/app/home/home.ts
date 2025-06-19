@@ -6,7 +6,10 @@ import { RouterModule } from '@angular/router';
   selector: 'app-home',
   imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  styleUrl: './home.scss',
+  template: ` 
+
+  `
 })
 export class Home {
   

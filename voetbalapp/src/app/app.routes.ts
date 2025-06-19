@@ -12,7 +12,7 @@ export const routes: Routes = [
         component: Home
     },
     {
-        path: 'toernooi-details:/id',
+        path: 'toernooi-details',
         component: ToernooiDetails,
         
     }
