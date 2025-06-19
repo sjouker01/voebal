@@ -1,6 +1,5 @@
 <section class="toernooi">
-    <article class="info">
-        <h1>wedstrijd landen</h1>
-        <h3> tussen stand</h3>
+    <article class="info" *ngFor="let game of games">
+      <h1>{{game.group}}</h1>
     </article>
 </section>
