@@ -1,5 +1,9 @@
 <section class="toernooi">
     <article class="info" *ngFor="let game of games">
-      <h1>{{game.group}}</h1>
+      <a [routerLink]="'./game-details'" [queryParams]="{id: game.id , } ">{{game.stage}}</a>
+      <p>{{game.home_team_name}}</p>
+      <p>{{game.away_team_name}}</p>
+      <p>{{game.home_team_goals}} </p>
+      <p>{{game.away_team_goals}}</p>
     </article>
 </section>
