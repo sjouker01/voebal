@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
 export class ToernooiDetails {
   id: string | null = null;
   filter: string | null = null;
-  matches: any[] =[];
+  matches: any[] =[]; 
   games: any[] = [];
   constructor(private route: ActivatedRoute , private matchesService:DetailsApi) {
     this.route.queryParamMap.subscribe((params) => {

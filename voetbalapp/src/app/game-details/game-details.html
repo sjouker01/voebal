@@ -1,1 +1,19 @@
-<p>game-details works!</p>
+<section class="gameData">
+  <article *ngFor=" let result of results">
+    <a
+      [routerLink]="'../country-details'"
+      [queryParams]="{HTT: result.home_team_initials}"
+      >{{result.home_team_name}}
+    </a>
+    <a [routerLink]="'../country-details'" 
+    [queryParams]="{ATI: result.away_team_initials}"
+    ></a>
+    <h1>{{result.home_team_name}} - {{result.away_team_name}}</h1>
+    <p>uitslag: {{result.home_team_goals}} - {{result.away_team_goals}}</p>
+    <p>bezoekers aantal: {{result.attendance}}</p>
+    <p>group: {{result.stage}}</p>
+    <p>schijtsrechter: {{result.referee}}</p>
+    <p>staduim: {{result.stadium}}</p>
+    <p>jaar van spelen: {{result.year}}</p>
+  </article>
+</section>
