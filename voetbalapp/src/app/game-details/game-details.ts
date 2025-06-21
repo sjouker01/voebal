@@ -22,7 +22,7 @@ export class GameDetails {
     )
     this.filtergame();
   });
-  // console.log( this.games)
+
   }
 
   filtergame(){

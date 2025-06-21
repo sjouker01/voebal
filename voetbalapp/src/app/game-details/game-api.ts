@@ -11,6 +11,6 @@ export class GameApi {
   }
 
   getGameData(){
-    return this.http.get('https://webteacher.nl/voetbal/json.php?data=matches');  
+    return this.http.get('https://webteacher.nl/voetbal/json.php?data=matches');
   }
 }

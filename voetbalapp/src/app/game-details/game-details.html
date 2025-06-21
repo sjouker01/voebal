@@ -2,13 +2,13 @@
   <article *ngFor=" let result of results">
     <a
       [routerLink]="'../country-details'"
-      [queryParams]="{HTT: result.home_team_initials}"
+      [queryParams]="{HTT: result.home_team_initials , RID:result.roundid}"
       >{{result.home_team_name}}
     </a>
     <a [routerLink]="'../country-details'" 
-    [queryParams]="{ATI: result.away_team_initials}"
-    ></a>
-    <h1>{{result.home_team_name}} - {{result.away_team_name}}</h1>
+    [queryParams]="{ATI: result.away_team_initials , RID:result.roundid}"
+    >{{result.away_team_name}}</a>
+ 
     <p>uitslag: {{result.home_team_goals}} - {{result.away_team_goals}}</p>
     <p>bezoekers aantal: {{result.attendance}}</p>
     <p>group: {{result.stage}}</p>
