@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DetailsApi } from './details-api';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-toernooi-details',
-  imports: [CommonModule],
+  imports: [CommonModule , RouterModule],
   templateUrl: './toernooi-details.html',
   styleUrl: './toernooi-details.scss',
 })
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
 export class ToernooiDetails {
   id: string | null = null;
   filter: string | null = null;
-  matches: any[] =[];
+  matches: any[] =[]; 
   games: any[] = [];
   constructor(private route: ActivatedRoute , private matchesService:DetailsApi) {
     this.route.queryParamMap.subscribe((params) => {
@@ -23,15 +24,17 @@ export class ToernooiDetails {
       this.matchesService.getMatches().subscribe((data:any) => {
         this.matches = data;
         // console.log( this.matches);
+        this.filterMatches();
+        console.log(this.games);
       })
-      this.filterMatches();
       
     });
   }
   filterMatches(): void {
-    console.log();
+   
    this.games = this.matches.filter(match => match.year === this.id);
    console.log(this.games);
+   
    
  }
 }

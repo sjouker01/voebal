@@ -13,3 +13,4 @@ export class DetailsApi {
   return this.http.get('https://webteacher.nl/voetbal/json.php?data=matches')
  }
 }
+  
