@@ -1,8 +1,10 @@
+<a  class="back" href="javascript:void(0)" (click)="goBack()">
+Back
+</a>
 <section class="playersInfo">
-    
-    <article *ngFor="let InfoPLayer of InfoPLayers">
-    <h1>playerName: {{InfoPLayer.playername}}</h1>
-    <p>positie: {{InfoPLayer.position}}</p>
-    <p>playerOf: {{InfoPLayer.team_initials}}</p>
+  <article *ngFor="let InfoPLayer of InfoPLayers" class="playerCard">
+    <h1 class="playerName">playerName: {{InfoPLayer.playername}}</h1>
+    <p class="playerPosition">positie: {{InfoPLayer.position}}</p>
+    <p class="playerTeam">playerOf: {{InfoPLayer.team_initials}}</p>
   </article>
 </section>

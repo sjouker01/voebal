@@ -1,0 +1,35 @@
+.playersInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  margin-top: 4%;
+
+  .playerCard {
+    flex: 1 1 calc(30% - 1rem); // Zorgt ervoor dat er twee kaarten naast elkaar staan
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .playerName {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .playerPosition {
+      font-size: 1rem;
+      color: #666;
+      margin: 0.25rem 0;
+    }
+
+    .playerTeam {
+      font-size: 1rem;
+      color: #444;
+      font-weight: bold;
+    }
+  }
+}
