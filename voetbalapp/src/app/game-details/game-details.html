@@ -6,7 +6,7 @@
       >{{result.home_team_name}}
     </a>
     <a [routerLink]="'../country-details'" 
-    [queryParams]="{ATI: result.away_team_initials , RID:result.roundid}"
+    [queryParams]="{HTT: result.away_team_initials , RID:result.roundid}"
     >{{result.away_team_name}}</a>
  
     <p>uitslag: {{result.home_team_goals}} - {{result.away_team_goals}}</p>

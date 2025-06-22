@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -10,4 +11,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = 'voetbalapp';
+  constructor(private location: Location){
+
+  }
+  goBack(){
+    this.location.back();
+  }
 }

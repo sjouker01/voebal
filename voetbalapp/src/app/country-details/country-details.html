@@ -1,1 +1,8 @@
-<p>country-details works!</p>
+<section class="playersInfo">
+    
+    <article *ngFor="let InfoPLayer of InfoPLayers">
+    <h1>playerName: {{InfoPLayer.playername}}</h1>
+    <p>positie: {{InfoPLayer.position}}</p>
+    <p>playerOf: {{InfoPLayer.team_initials}}</p>
+  </article>
+</section>
