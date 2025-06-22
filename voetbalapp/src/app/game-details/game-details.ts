@@ -17,10 +17,11 @@ export class GameDetails {
   constructor(private route: ActivatedRoute, private gamesService: GameApi) {
     this.route.queryParamMap.subscribe((params) => {
       this.id = params.get('id');
-      this.gamesService.getGameData().subscribe((data:any) =>
-      this.games = data
-    )
-    this.filtergame();
+    this.gamesService.getGameData().subscribe((data:any) => {
+      this.games = data;
+      this.filtergame();
+    })
+    console.log(this.results);
   });
 
   }
