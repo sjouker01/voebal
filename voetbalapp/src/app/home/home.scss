@@ -1,0 +1,36 @@
+.hompage {
+    display: flex; // Zorgt ervoor dat de items naast elkaar staan
+    flex-wrap: wrap; // Laat items naar een nieuwe regel gaan als er niet genoeg ruimte is
+    gap: 20px; // Ruimte tussen de items
+    background-color: #f9f9f9; // Lichtgrijze achtergrond
+    // padding: 20px; // Ruimte rondom de inhoud
+    border-radius: 8px; // Ronde hoeken
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Schaduw voor diepte
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 1.5rem;
+
+    ul {
+        list-style-type: none; // Geen standaard lijststijl
+        padding: 0; // Geen extra ruimte
+        flex: 1 1 calc(33.333% - 20px); // Zorgt ervoor dat elk item een derde van de breedte inneemt, minus de gap
+        max-width: calc(33.333% - 20px); // Maximale breedte voor elk item
+
+        p {
+            font-size: 16px; // Tekstgrootte
+            color: #333; // Donkere tekstkleur
+            margin: 5px 0; // Ruimte tussen paragrafen
+        }
+
+        a {
+            text-decoration: none; // Geen onderstreping
+            color: #007bff; // Blauwe kleur voor links
+            font-weight: bold; // Vetgedrukte tekst
+
+            &:hover {
+                color: #0056b3; // Donkerdere kleur bij hover
+                text-decoration: underline; // Onderstreping bij hover
+            }
+        }
+    }
+}

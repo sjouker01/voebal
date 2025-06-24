@@ -1,10 +1,28 @@
+.back {
+  position: absolute;
+  margin-top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #007bff; // Kies een kleur
+  color: #fff; // Tekstkleur
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1%;
+  &:hover {
+    background-color: #0056b3; // Hover effect
+  }
+  
+}
 .playersInfo {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
   background-color: #f9f9f9;
-  margin-top: 4%;
+  
 
   .playerCard {
     flex: 1 1 calc(30% - 1rem); // Zorgt ervoor dat er twee kaarten naast elkaar staan
@@ -12,6 +30,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
+    margin-top: 3vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .playerName {
