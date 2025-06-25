@@ -3,6 +3,7 @@ import { GameApi } from './game-api';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-game-details',
   imports: [CommonModule, RouterModule],
@@ -11,23 +12,29 @@ import { CommonModule } from '@angular/common';
 })
 export class GameDetails {
   id: string | null = null;
-  
+
   games: any[] = [];
-  results: any[] =[];
-  constructor(private route: ActivatedRoute, private gamesService: GameApi) {
+  results: any[] = [];
+  constructor(
+    private route: ActivatedRoute,
+    private gamesService: GameApi,
+    private location: Location
+  ) {
     this.route.queryParamMap.subscribe((params) => {
       this.id = params.get('id');
-    this.gamesService.getGameData().subscribe((data:any) => {
-      this.games = data;
-      this.filtergame();
-    })
-    console.log(this.results);
-  });
-
+      this.gamesService.getGameData().subscribe((data: any) => {
+        this.games = data;
+        this.filtergame();
+      });
+      console.log(this.results);
+    });
   }
 
-  filtergame(){
-    this.results = this.games.filter( game => game.id === this.id)
+  filtergame() {
+    this.results = this.games.filter((game) => game.id === this.id);
     console.log(this.results);
+  }
+  goBack() {
+    this.location.back();
   }
 }

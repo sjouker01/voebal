@@ -1,19 +1,27 @@
 <section class="gameData">
   <article *ngFor=" let result of results">
     <a
+      id="landa"
       [routerLink]="'../country-details'"
       [queryParams]="{HTT: result.home_team_initials , RID:result.roundid}"
-      >{{result.home_team_name}}
+      >{{result.home_team_name}} -
     </a>
-    <a [routerLink]="'../country-details'" 
-    [queryParams]="{HTT: result.away_team_initials , RID:result.roundid}"
-    >{{result.away_team_name}}</a>
- 
-    <p>uitslag: {{result.home_team_goals}} - {{result.away_team_goals}}</p>
-    <p>bezoekers aantal: {{result.attendance}}</p>
-    <p>group: {{result.stage}}</p>
-    <p>schijtsrechter: {{result.referee}}</p>
-    <p>staduim: {{result.stadium}}</p>
-    <p>jaar van spelen: {{result.year}}</p>
+    <a
+      id="landb"
+      [routerLink]="'../country-details'"
+      [queryParams]="{HTT: result.away_team_initials , RID:result.roundid}"
+    >
+      - {{result.away_team_name}}</a
+    >
+
+    <p id="a">
+      uitslag: {{result.home_team_goals}} - {{result.away_team_goals}}
+    </p>
+    <p id="a">bezoekers aantal: {{result.attendance}}</p>
+    <p id="a">group: {{result.stage}}</p>
+    <p id="a">schijtsrechter: {{result.referee}}</p>
+    <p id="a">staduim: {{result.stadium}}</p>
+    <p id="a">jaar van spelen: {{result.year}}</p>
   </article>
+  <a class="back" href="javascript:void(0)" (click)="goBack()"> Back </a>
 </section>
