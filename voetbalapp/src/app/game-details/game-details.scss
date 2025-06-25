@@ -1,26 +1,25 @@
+@import url(../home/home.scss);
+$tab: 785px;
+$tel: 480px;
+
+$backColor: rgb(64, 64, 255);
+$colortitle: #8a2a2b;
 section.gameData {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-//   height: 100vh; // Zorgt ervoor dat de sectie precies de volledige hoogte van de viewport inneemt
-  padding: 3rem; // Vergroot de padding voor meer ruimte
-//   background-color: #f9fafb;
   border-radius: 1rem;
-//   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-10%); // Verplaatst de sectie iets naar boven
-  
+  margin-top: 5vh;
   article {
-      width: 80%; // Zorgt ervoor dat de artikelen iets breder zijn
-      margin-bottom: 2rem; // Vergroot de ruimte tussen artikelen
-      padding: 2rem; // Vergroot de padding binnen elk artikel
-      border: 1px solid #7e7e7c;
-      border-radius: 1rem;
-      background-color: #dadada;
-      text-align: center; // Centreert de tekst binnen elk artikel
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-top: 10vh;
-
+    width: 80%;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 2px solid #7e7e7c;
+    border-radius: 1rem;
+    background-color: #dadada;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     &:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -30,17 +29,9 @@ section.gameData {
     a#landb {
       display: inline-block;
       font-size: 2.5rem; // Vergroot de tekst van de landnamen
-      color: #1d4ed8;
-      font-weight: 700; // Maakt de tekst vet
+      color: $colortitle;
+      font-weight: 70; // Maakt de tekst vet
       text-decoration: none;
-      padding: 0.5rem 0; // Vergroot de ruimte rond de links
-      border-bottom: 2px solid transparent;
-      transition: color 0.3s ease, border-bottom-color 0.3s ease;
-
-      &:hover {
-        color: #2563eb;
-        border-bottom-color: #2563eb;
-      }
     }
 
     p#a {
@@ -55,3 +46,46 @@ section.gameData {
     }
   }
 }
+
+.back {
+  background-color: $backColor;
+  align-items: center;
+  font-size: 3vw;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+@media screen and (max-width: $tab) {
+  section.gameData {
+    max-width: 50vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 40vh;
+    margin-top: 30vh;
+  }
+}
+@media screen and (max-width: $tel){
+  section.gameData{
+    position: absolute;
+    max-height: 30vh;
+    margin-top: 30vh;
+ article{
+     a#landa,
+    a#landb{
+      font-size: 1.5rem;
+    }
+    p#a {
+      font-size: 1.4rem; // Vergroot de tekst van de paragrafen
+      color: #4b5563;
+      // margin: 1rem 0; // Vergroot de ruimte tussen paragrafen
+
+      &:first-of-type {
+        font-weight: 700;
+        color: #111827;
+      }
+  }
+}
+  }}
