@@ -1,7 +1,7 @@
 <section class="hompage">
-   <ul *ngFor=" let gameDate of gameDates">
+   <ul *ngFor=" let gameDate of gameDates" [routerLink]="'toernooi-details'"[queryParams]="{id: gameDate.id , }">
       <p>{{gameDate.id}}</p>
-      <a [routerLink]="'toernooi-details'" [queryParams]="{id: gameDate.id , } ">{{gameDate.country}}</a>
+     <p>{{gameDate.country}}</p>
 
    </ul>
 </section>

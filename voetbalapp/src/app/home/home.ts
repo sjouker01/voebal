@@ -7,24 +7,17 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  template: ` 
-
-  `
 })
 export class Home {
-  
   /**
    * Description placeholder
    *array of jaar
    * @type {any[] }
    */
-  gameDates: any[] = []; 
+  gameDates: any[] = [];
   constructor(private homeService: HomeApi) {
-    this.homeService.getData().subscribe((data:any) =>{
+    this.homeService.getData().subscribe((data: any) => {
       this.gameDates = data;
-     
-     
-    }
-  ) 
-}
+    });
+  }
 }
