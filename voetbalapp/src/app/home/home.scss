@@ -1,8 +1,6 @@
 $primary-color: #8a2a2b;
-
-
-
-
+$tab: 785px;
+$tel: 480px; 
 
 
 .hompage {
@@ -30,7 +28,7 @@ $primary-color: #8a2a2b;
   }
 }
 // tab
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tab) {
 .hompage {
     display: flex;
     margin: 5vw;
@@ -47,7 +45,7 @@ $primary-color: #8a2a2b;
 
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $tel) {
     .hompage{
         display: flex;
         ul {
