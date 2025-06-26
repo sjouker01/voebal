@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Location } from '@angular/common';
 @Component({
   selector: 'app-country-details',
-  imports: [RouterModule , CommonModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './country-details.html',
   styleUrl: './country-details.scss',
 })
@@ -24,23 +24,21 @@ export class CountryDetails {
     this.route.queryParamMap.subscribe((params) => {
       this.LCode = params.get('HTT');
       this.RID = params.get('RID');
-      // console.log(this.LCode);
       this.CountryApiService.getPlayersData().subscribe((data: any) => {
         this.PLDatas = data;
         this.filterPLData();
       });
     });
-    console.log(this.InfoPLayers);
   }
 
-filterPLData() {
-  this.InfoPLayers = this.PLDatas.filter(
-    (PLData) => PLData.roundid === this.RID &&
-             PLData.team_initials === this.LCode
-  );
+  filterPLData() {
+    this.InfoPLayers = this.PLDatas.filter(
+      (PLData) =>
+        PLData.roundid === this.RID && PLData.team_initials === this.LCode
+    );
   }
-  
-      goBack(){
+
+  goBack() {
     this.location.back();
   }
 }

@@ -26,13 +26,11 @@ export class GameDetails {
         this.games = data;
         this.filtergame();
       });
-      console.log(this.results);
     });
   }
 
   filtergame() {
     this.results = this.games.filter((game) => game.id === this.id);
-    console.log(this.results);
   }
   goBack() {
     this.location.back();
