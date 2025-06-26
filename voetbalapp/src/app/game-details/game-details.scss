@@ -1,9 +1,5 @@
-@import url(../home/home.scss);
-$tab: 785px;
-$tel: 480px;
+@import "../home/home.scss";
 
-$backColor: rgb(64, 64, 255);
-$colortitle: #8a2a2b;
 section.gameData {
   display: flex;
   flex-direction: column;
@@ -28,16 +24,16 @@ section.gameData {
     a#landa,
     a#landb {
       display: inline-block;
-      font-size: 2.5rem; // Vergroot de tekst van de landnamen
-      color: $colortitle;
-      font-weight: 70; // Maakt de tekst vet
+      font-size: 2.5rem;
+      color: $primary-text;
+      font-weight: 70;
       text-decoration: none;
     }
 
     p#a {
-      font-size: 1.75rem; // Vergroot de tekst van de paragrafen
+      font-size: 1.75rem;
       color: #4b5563;
-      margin: 1rem 0; // Vergroot de ruimte tussen paragrafen
+      margin: 1rem 0;
 
       &:first-of-type {
         font-weight: 700;
@@ -67,25 +63,26 @@ section.gameData {
     margin-top: 30vh;
   }
 }
-@media screen and (max-width: $tel){
-  section.gameData{
+@media screen and (max-width: $tel) {
+  section.gameData {
     position: absolute;
     max-height: 30vh;
     margin-top: 30vh;
- article{
-     a#landa,
-    a#landb{
-      font-size: 1.5rem;
-    }
-    p#a {
-      font-size: 1.4rem; // Vergroot de tekst van de paragrafen
-      color: #4b5563;
-      // margin: 1rem 0; // Vergroot de ruimte tussen paragrafen
-
-      &:first-of-type {
-        font-weight: 700;
-        color: #111827;
+    article {
+      a#landa,
+      a#landb {
+        font-size: 1.5rem;
       }
+      p#a {
+        font-size: 1.4rem; // Vergroot de tekst van de paragrafen
+        color: #4b5563;
+        // margin: 1rem 0; // Vergroot de ruimte tussen paragrafen
+
+        &:first-of-type {
+          font-weight: 700;
+          color: #111827;
+        }
+      }
+    }
   }
 }
-  }}

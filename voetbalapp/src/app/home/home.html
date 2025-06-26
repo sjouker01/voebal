@@ -1,13 +1,12 @@
+
+
 <section class="hompage">
-   <ul *ngFor=" let gameDate of gameDates" [routerLink]="'toernooi-details'"[queryParams]="{id: gameDate.id , }">
-      <p>{{gameDate.id}}</p>
-     <p>{{gameDate.country}}</p>
-
-   </ul>
+  <ul
+    *ngFor=" let gameDate of gameDates"
+    [routerLink]="'toernooi-details'"
+    [queryParams]="{id: gameDate.id , }"
+  >
+    <p>{{gameDate.id}}</p>
+    <p>{{gameDate.country}}</p>
+  </ul>
 </section>
-<!-- 
-to do later :
-- adding versiringen 
-- vlag adding 
-
--->

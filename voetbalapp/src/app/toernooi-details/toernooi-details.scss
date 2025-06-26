@@ -1,5 +1,4 @@
 @import "../home/home.scss";
-$backColor: rgb(64, 64, 255);
 
 .back1 {
   position: absolute;
@@ -26,14 +25,14 @@ $backColor: rgb(64, 64, 255);
   margin: 2vw;
   margin-top: 15vh;
   .info {
-    flex: 1 1 calc(33% - 20px);
-    max-width: 1 1 calc(33% - 20px);
+    flex: $flex;
+    max-width: $flexMax;
     background-color: #e3e8ea;
-    border-radius: 10px;
+    border-radius: $borRad;
   }
 
   .info p {
-    color: $primary-color;
+    color: $primary-text;
     text-decoration: none;
   }
 }
