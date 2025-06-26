@@ -2,11 +2,11 @@
     Back
 </a>
 <section class="toernooi">
-    <article class="info" *ngFor="let game of games">
-        <a [routerLink]="'../game-details'" [queryParams]="{id: game.id}" id="link">{{game.stage}}</a>
-        <p id="home-team-{{game.id}}">{{game.home_team_name}}</p>
-        <p id="away-team-{{game.id}}">{{game.away_team_name}}</p>
-        <p id="home-goals-{{game.id}}">{{game.home_team_goals}}</p>
-        <p id="away-goals-{{game.id}}">{{game.away_team_goals}}</p>
+    <article class="info" *ngFor="let game of games" [routerLink]="'../game-details'" [queryParams]="{id: game.id}">
+        <h1 >{{game.stage}}</h1>
+        <p id="home-team-{{game.id}}">{{game.home_team_name}} - {{game.away_team_name}}</p>
+        <p id="away-team-{{game.id}}"></p>
+        <p id="home-goals-{{game.id}}">{{game.home_team_goals}} - {{game.away_team_goals}}</p>
+        <p id="away-goals-{{game.id}}"></p>
     </article>
 </section>

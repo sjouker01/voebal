@@ -1,89 +1,70 @@
+@import "../home/home.scss";
+$backColor: rgb(64, 64, 255);
+
 .back1 {
   position: absolute;
-  margin-top: 10px;
+  top: 1vh;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 10px 20px;
-  background-color: #007bff; // Kies een kleur
-  color: #fff; // Tekstkleur
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 1%;
-  &:hover {
-    background-color: #0056b3; // Hover effect
-  }
-  
-}
-#link {
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: $backColor;
+  font-size: 3vw;
   text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-
-  &:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
-}
-
-[id^="home-team-"] {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-[id^="away-team-"] {
-  font-weight: bold;
-  color: #8e44ad;
-}
-
-[id^="home-goals-"],
-[id^="away-goals-"] {
-  color: #555;
-  font-size: 1rem;
+  color: black;
+  border-radius: 20px;
+  padding: 1rem;
+  max-width: 6vw;
 }
 
 .toernooi {
   display: flex;
-  flex-wrap: wrap; /* Zorgt ervoor dat items naar de volgende rij gaan als er geen ruimte is */
-  justify-content: center; /* Centreert de items horizontaal */
-  gap: 1.5rem; /* Voegt ruimte toe tussen de items */
-  padding: 2rem;
-
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2vw;
+  margin-top: 15vh;
   .info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    width: 300px; /* Zorgt ervoor dat elk blok een vaste breedte heeft */
-    text-align: center;
-    margin-top: 0.5%;
-    
-    #link {
-      grid-column: span 2;
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-      
-      &:hover {
-        text-decoration: underline;
-        color: #0056b3;
-      }
+    flex: 1 1 calc(33% - 20px);
+    max-width: 1 1 calc(33% - 20px);
+    background-color: #e3e8ea;
+    border-radius: 10px;
+  }
+
+  .info p {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+//tab
+@media screen and (max-width: $tab) {
+  .toernooi {
+    display: flex;
+    margin: 5vw;
+    font-size: 1rem;
+    margin-top: 10vh;
+    .info {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
     }
-    
-    [id^="home-team-"],
-    [id^="away-team-"] {
-      font-weight: bold;
-      color: #2c3e50;
-    }
-    
-    [id^="home-goals-"],
-    [id^="away-goals-"] {
-      color: #555;
-      font-size: 1rem;
+  }
+}
+@media screen and (max-width: $tel) {
+  .toernooi {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    margin: 3;
+    padding: 0;
+    .info {
+      flex: 1 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      align-items: center;
+      align-content: center;
     }
   }
 }

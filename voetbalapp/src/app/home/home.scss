@@ -1,36 +1,59 @@
+$primary-color: #8a2a2b;
+$tab: 785px;
+$tel: 480px; 
+
+
 .hompage {
-    display: flex; // Zorgt ervoor dat de items naast elkaar staan
-    flex-wrap: wrap; // Laat items naar een nieuwe regel gaan als er niet genoeg ruimte is
-    gap: 20px; // Ruimte tussen de items
-    background-color: #f9f9f9; // Lichtgrijze achtergrond
-    // padding: 20px; // Ruimte rondom de inhoud
-    border-radius: 8px; // Ronde hoeken
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Schaduw voor diepte
-    text-align: center;
-    margin-top: 10vh;
-    font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 3vw;
+  gap: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  align-items: center;
+
+  ul {
+    border-radius: 10px;
+    list-style: none;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    padding: 0;
+    background-color: #a09d9d;
+
+    padding-bottom: 2vh;
+  }
+  ul p {
+    color: $primary-color;
+  }
+}
+// tab
+@media screen and (max-width: $tab) {
+.hompage {
+    display: flex;
+    margin: 5vw;
+    font-size: 1rem;
 
     ul {
-        list-style-type: none; // Geen standaard lijststijl
-        padding: 0; // Geen extra ruimte
-        flex: 1 1 calc(33.333% - 20px); // Zorgt ervoor dat elk item een derde van de breedte inneemt, minus de gap
-        max-width: calc(33.333% - 20px); // Maximale breedte voor elk item
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        
+    }
+}
 
-        p {
-            font-size: 16px; // Tekstgrootte
-            color: #333; // Donkere tekstkleur
-            margin: 5px 0; // Ruimte tussen paragrafen
-        }
+}
 
-        a {
-            text-decoration: none; // Geen onderstreping
-            color: #007bff; // Blauwe kleur voor links
-            font-weight: bold; // Vetgedrukte tekst
 
-            &:hover {
-                color: #0056b3; // Donkerdere kleur bij hover
-                text-decoration: underline; // Onderstreping bij hover
-            }
+
+@media screen and (max-width: $tel) {
+    .hompage{
+        display: flex;
+        ul {
+            flex: 1  calc(100% - 40px);
+            max-width: calc(100% - 40px);
+            align-items: center;
+            align-content: center;
         }
     }
 }
+// #8a2a2b

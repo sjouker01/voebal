@@ -1,37 +1,35 @@
+@import "../home/home.scss";
+$backColor: rgb(64, 64, 255);
+
 .back {
   position: absolute;
-  margin-top: 10px;
+  top: 1vh;
   left: 50%;
-  transform: translate(-50%, -50%); 
-  text-align: center;
-  padding: 10px 20px;
-  background-color: #007bff; // Kies een kleur
-  color: #fff; // Tekstkleur
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 1%;
-  &:hover {
-    background-color: #0056b3; // Hover effect
-  }
-  
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: $backColor;
+  font-size: 3vw;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  padding: 1rem;
+  max-width: 6vw;
 }
 .playersInfo {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  
+  gap: 30px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2vw;
+  margin-top: 15vh;
 
   .playerCard {
-    flex: 1 1 calc(30% - 1rem); // Zorgt ervoor dat er twee kaarten naast elkaar staan
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 3vh;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
+    max-width: 1 1 calc(33% - 20px);
+    background-color: #e3e8ea;
+    border-radius: 10px;
 
     .playerName {
       font-size: 1.5rem;
@@ -49,6 +47,37 @@
       font-size: 1rem;
       color: #444;
       font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: $tab) {
+  section.playersInfo {
+    display: flex;
+    margin: 5vw;
+    margin-top: 13vh;
+    article.playerCard  {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      
+    }
+  }
+}
+@media screen and (max-width: $tel){
+  section.playersInfo{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    margin: 2;
+    padding: 0;
+      article.playerCard  {
+      flex: 1 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      align-items: center;
+      align-content: center;
+      
     }
   }
 }
